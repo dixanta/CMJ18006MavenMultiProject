@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.dixanta</groupId>
+    <artifactId>MavenMultiModuleProject</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    
+    <modules>
+        <module>DB-Core-Module</module>
+        <module>Chat-Server-Module</module>
+        <module>User-Module</module>
+        <module>App-Core-Module</module>
+    <module>Web-Module</module>
+  </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>6.0.6</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>com.dixanta</groupId>
+                <artifactId>DB-Core-Module</artifactId>
+                <version>1.0</version>
+            </dependency>
+            
+            <dependency>
+                <groupId>com.dixanta</groupId>
+                <artifactId>User-Module</artifactId>
+                <version>1.0</version>
+            </dependency>
+            <dependency>
+                <groupId>com.dixanta</groupId>
+                <artifactId>App-Core-Module</artifactId>
+                <version>1.0</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
